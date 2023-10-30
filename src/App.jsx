@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import UseStateHook from "./useStateHook";
 
 function App() {
   // const hadndleEventClick = () => {
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <>
-      <h3>react-core-concept-part2</h3>
+      <h3>react-core-concept-part2222</h3>
+      <UseStateHook></UseStateHook>;
       <button onClick={() => hadndleEventClick(5)}>Click Here</button>
     </>
   );
