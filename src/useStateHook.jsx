@@ -1,4 +1,16 @@
+import { useState } from "react";
+
 export default function UseStateHook() {
+  const [count, setCount] = useState(0);
+  const handleAdd = () => {
+    const newCount = count + 1;
+    setCount(newCount);
+  };
+
+  const handleRemove = () => {
+    setCount(count - 1);
+  };
+
   const hookStyle = {
     margin: "10px",
     border: "5px solid red",
@@ -6,7 +18,9 @@ export default function UseStateHook() {
   };
   return (
     <div style={hookStyle}>
-      <button>Add</button>
+      <h3>Count: {count}</h3>
+      <button onClick={handleAdd}>Add</button>
+      <button onClick={handleRemove}>Remove</button>
     </div>
   );
 }
