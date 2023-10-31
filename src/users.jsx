@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import User from "./user";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -9,8 +10,17 @@ export default function Users() {
       .then((data) => setUsers(data));
   }, []);
   return (
-    <div>
+    <div
+      style={{
+        margin: "10px",
+        border: "5px solid red",
+        padding: "10px",
+      }}
+    >
       <h3>Users:{users.length}</h3>
+      {users.map((user) => (
+        <User user={user}></User>
+      ))}
     </div>
   );
 }
