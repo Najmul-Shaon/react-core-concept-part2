@@ -18,7 +18,7 @@ export default function UseStateHook() {
   };
   return (
     <div style={hookStyle}>
-      <h3>Count: {count}</h3>
+      <h3>Counter: {count}</h3>
       <button onClick={handleAdd}>Add</button>
       <button onClick={handleRemove}>Remove</button>
     </div>
